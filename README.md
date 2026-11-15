@@ -11,6 +11,7 @@
   &nbsp;·&nbsp; <a href="#install">Install</a>
   &nbsp;·&nbsp; <a href="#features">Features</a>
   &nbsp;·&nbsp; <a href="https://www.youtube.com/watch?v=mwXeeYYvAm4">Video</a>
+  &nbsp;·&nbsp; <a href="docs/merge-projects.md">Merge guide</a>
   &nbsp;·&nbsp; <a href="https://github.com/TequilaJosh/Lufia-Forge-Releases/issues">Report a bug</a>
 </p>
 
@@ -63,6 +64,7 @@ No ROM is included. You need your own legally obtained copy of the game. Fan-pat
 - **Your work is saved for you:** Save Project (Ctrl+S) any time; the project also saves itself every 5 minutes (waiting until you pause, never interrupting typing), and closing only asks when something isn't saved. Every save keeps the one before as a .bak.
 - **No Apply buttons needed:** edits go into the ROM by themselves when you move on, save, export or play. One **Apply** button in the top bar writes every tab's edits at once if you want them in right away.
 - **Export ROM** writes a playable ROM next to the project; launching BizHawk writes a fresh copy, so the game always has your latest changes. **IPS export** shares your edits as a patch.
+- **Merge projects** (File > Merge Another Project Into This One): bring another project's work into yours, see every difference (by map, event by event), tick what goes in and settle conflicts. [Step-by-step guide](docs/merge-projects.md).
 - **Undo and redo for everything** (Ctrl+Z / Ctrl+Y), with **Edit > History** to jump back to any recent change.
 - **Resize** the sections of every tab by dragging the bands between them (double-click a band to reset it), or **pop a section out** into its own window to make it as big as you like or put it on another screen.
 - **Hold the middle mouse button and drag** to move around any map.
