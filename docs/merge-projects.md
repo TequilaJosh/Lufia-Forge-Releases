@@ -2,7 +2,7 @@
 
 Bring the work from one project into another, see every difference before it goes in, and keep the final say on each one.
 
-*File > Merge Another Project Into This One, in Lufia Forge 0.4.0-beta.25 and later. [Download the latest release](https://github.com/TequilaJosh/Lufia-Forge-Releases/releases).*
+*File > Merge Another Project Into This One, in Lufia Forge 0.4.0-beta.25 and later (0.4.0-beta.27 finds the shared version by itself when it can). [Download the latest release](https://github.com/TequilaJosh/Lufia-Forge-Releases/releases).*
 
 **Contents:** [When to use it](#when-to-use-it) · [What to have ready](#what-to-have-ready) · [Step by step](#step-by-step) · [Good to know](#good-to-know)
 
@@ -17,7 +17,7 @@ Bring the work from one project into another, see every difference before it goe
 
 - **The project you want to end up with**, open in Lufia Forge. This is "this project" in the merge window.
 - **The other project's .lfproj file** (or a ROM). Lufia Forge only reads it; it never changes it.
-- **Best of all: the version both projects were copied from.** If you both started from the same project file, keep that file. With it, Lufia Forge can tell what was already there before you split, and you get far fewer conflicts.
+- **Best of all: the version both projects were copied from.** If you both started from the same project file, keep that file. With it, Lufia Forge can tell what was already there before you split, and you get far fewer conflicts. When one project simply carries on from the other (you copied it and kept working only in the copy), you don't need it: Lufia Forge finds it by itself (see [step 4](#4-count-from-the-shared-version)).
 - **A safety copy of your project:** File > New Project From This One, or just copy the .lfproj file somewhere. A merge can be undone, but a spare copy never hurts.
 
 ## Step by step
@@ -65,11 +65,15 @@ Map info is shown record by record. Anything Lufia Forge can't put into words is
 
 *The hex view of the other project's item break chances patch. The line at the top explains that this project's data that was in that spot is written again in free room, so it isn't lost.*
 
-### 4. Count from the shared version (if you have it)
+### 4. Count from the shared version
 
-At first, changes are counted from the ROM each project started from. That means anything changed before you split, and then changed again by either of you, looks like a conflict.
+Look at the line above the list: it says what changes are counted from.
 
-Click **Count from the version both were made from...** and pick the project file (or ROM) both projects were copied from. The list is worked out again. The line above the list then names that version, and **Count from the starting ROM** goes back to the first way.
+**When one project carries on from the other, Lufia Forge picks the shared version by itself** (from 0.4.0-beta.27). A copied project starts with the whole change log of the project it was copied from, so when one project's change log is exactly how the other's begins, the merge counts from that version. The line then reads "Changes are counted from this project as last saved..." (or names the other project). For example: you copied "My hack" to "My hack (rooms fixed)", worked only in the copy, and now merge the copy back into "My hack". Everything you did in the copy comes in, with no conflicts.
+
+**Otherwise, changes are counted from the ROM each project started from.** That means anything changed before you split, and then changed again by either of you, looks like a conflict. A new map that both projects have is the clearest case: counted from the starting ROM, both projects "made" it, so every difference on it is a conflict and stays out unless you tick it.
+
+To fix that, click **Count from the version both were made from...** and pick the project file (or ROM) both projects were copied from. The list is worked out again and the line above it names that version. **Count from the starting ROM** goes back to the first way.
 
 ![The merge window counting from the version both copies were made from](images/merge-projects/5_from_version.png)
 
