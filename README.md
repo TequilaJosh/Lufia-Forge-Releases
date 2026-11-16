@@ -299,6 +299,8 @@ Open a Lufia II ROM and Lufia Forge shows Lufia II's own tools, grouped in a sid
 - **Monster battle pictures:** paint them pixel by pixel, PNG in and out, new palettes, **new pictures**, and how each one moves in battle (floats, shakes, twitches). A warning shows when a battle needs more picture room than the game has.
 - **Encounters:** zones on a small world map, groups with their chances and monster pictures, monsters picked from a list with pictures, new groups, and **story battles** (the six monsters and their places on the screen).
 - **Items, spells and IP attacks:** names, prices, effects, who can use them, and their descriptions; **new spells and IP attacks**, and the effects behind them.
+- **16 new statuses** (Zombie, Frozen, Burnt, Berserk, Regen, Doom, Stop, Mana leak and more) that monsters, attacks and items can cause, cure, resist or ward against; **Bounce** (physical hits come back at the attacker) on monsters and items; **focus** for the Tag ring and Tag candy (each attack in a row on one foe hits harder, +10% up to +100%).
+- **Monster attacks** with names of your own, monster types, element percentages for monsters, heroes and items, and a **break chance** for every item.
 - **Spell animations:** every battle animation plays in the editor exactly as the game plays it. Paint its graphics, change its colours and timing, copy it into a new one and give it to a spell or IP attack. **Weapon swings** can be copied too and given to a weapon, so a weapon can have its own slash (with every hero's version; the preview shows any hero).
 
 <img src="screenshots/lufia2/encounters.png" width="440" alt="Lufia II Encounters"> <img src="screenshots/lufia2/animations.png" width="440" alt="Lufia II Animations">
@@ -324,6 +326,7 @@ Open a Lufia II ROM and Lufia Forge shows Lufia II's own tools, grouped in a sid
 - **Credits:** the staff roll as plain text.
 - **Settings:** random battle rate, world map walking speed, walking in towns (normal, run with R, always fast), the selling price and the level cap.
 - **8 MB ROMs** (Settings > ROM SIZE) for big projects: about 2 MB more room for events and cutscenes. Plays in Snes9x, bsnes and BizHawk's BSNESv115+ core.
+- **Snes9x 1.51 mode** (Edit > Settings, on unless you turn it off): nothing is written to the last 2 MB of an 8 MB ROM, which Snes9x 1.51 / 1.52 can't read, and what an older Lufia Forge put there is moved. [More in the merge guide](docs/merge-projects.md#snes9x-151-mode-edit--settings).
 - The garbled shrine maps of the US version (CF and F1) are fixed the way the European release fixed them.
 
 ### Fan hacks

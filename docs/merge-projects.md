@@ -2,7 +2,7 @@
 
 Bring the work from one project into another, see every difference before it goes in, and keep the final say on each one.
 
-*File > Merge Another Project Into This One, in Lufia Forge 0.4.0-beta.25 and later (0.4.0-beta.27 finds the shared version by itself when it can). [Download the latest release](https://github.com/TequilaJosh/Lufia-Forge-Releases/releases).*
+*File > Merge Another Project Into This One, in Lufia Forge 0.4.0-beta.25 and later (0.4.0-beta.27 finds the shared version by itself when it can; 0.4.0-beta.28 adds [Snes9x 1.51 mode](#snes9x-151-mode-edit--settings)). [Download the latest release](https://github.com/TequilaJosh/Lufia-Forge-Releases/releases).*
 
 **Contents:** [When to use it](#when-to-use-it) · [What to have ready](#what-to-have-ready) · [Step by step](#step-by-step) · [Good to know](#good-to-know)
 
@@ -124,6 +124,21 @@ Other new data both projects put at the same spot, such as two different patches
 ### New maps
 
 New maps made in only the other project come along as they are. If both projects made new maps, the map numbers clash: only this project's new maps are kept, and a warning at the top of the window says so. Make the other project's new maps again after the merge.
+
+### Snes9x 1.51 mode (Edit > Settings)
+
+Snes9x 1.51 and 1.52 can't read the last 2 MB of an 8 MB Lufia II ROM: a map whose data is up there crashes or resets the game in those emulators. **Edit > Settings > Snes9x 1.51 mode** (from 0.4.0-beta.28, on unless you turn it off) keeps Lufia Forge out of that part of the ROM.
+
+![The Settings window with Snes9x 1.51 mode ticked](images/settings/snes9x_151_mode.png)
+
+What it means for a merge:
+
+- **Nothing the merge writes goes in the last 2 MB.** If the other project was made with an older Lufia Forge and has data up there (new map info, new maps, new sprites, the map name box), that data is moved to room every emulator reads before it comes into your project.
+- **Your project's last 2 MB stays exactly as it was.** Anything of yours that was still up there is moved when the project opens in this mode (one Undo step, and the change log says what moved).
+- **Turning the mode on with a project open** moves that project's data out of the last 2 MB right away, as one Undo step. Save the project afterwards to keep it.
+- **Turn it off** only if everyone plays your hack on an emulator that reads the whole ROM (a current Snes9x, bsnes, BizHawk). Lufia Forge then uses those 2 MB first again.
+
+The setting belongs to Lufia Forge, not to a project: it is the same for every project you open, and both people merging should use the same setting.
 
 ### Lufia 1 projects
 
