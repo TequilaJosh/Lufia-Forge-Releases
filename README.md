@@ -12,6 +12,7 @@
   &nbsp;·&nbsp; <a href="#features">Features</a>
   &nbsp;·&nbsp; <a href="https://www.youtube.com/watch?v=mwXeeYYvAm4">Video</a>
   &nbsp;·&nbsp; <a href="docs/merge-projects.md">Merge guide</a>
+  &nbsp;·&nbsp; <a href="docs/flags-and-npcs.md">Flags and NPCs guide</a>
   &nbsp;·&nbsp; <a href="https://github.com/TequilaJosh/Lufia-Forge-Releases/issues">Report a bug</a>
 </p>
 
@@ -285,7 +286,9 @@ Open a Lufia II ROM and Lufia Forge shows Lufia II's own tools, grouped in a sid
 - **Playback in the editor** follows the story flags you tick and takes the branches the game would, saying which one and why; characters face the way they face, with walking frames, and a walk that a wall, another character or a walk area would stop gets a warning and a red box on the map.
 - **Test in the game** starts a new game right on the map.
 - **Events:** every map's event scripts command by command (205 commands) in plain words, with names, items, songs and conditions written out, edited step by step, and **new events** of your own.
-- **Story flags:** all 256, with every script that sets, clears or tests each one.
+- **Flags tab:** story flags, event counters, treasure chest flags, puzzle switches and doors, each with every event that uses it (double-click to open the event at that step). Give any flag a name and a note (kept in the project and shown in the event editor), and **New flag** hands you a free one. [Flags and NPCs guide](docs/flags-and-npcs.md).
+- **128 more story flags** (100-17F) for your own story, in one click: they work everywhere a story flag does and are kept in the save.
+- **NPCs that change with the story:** different lines by story flag, characters that show up or disappear (When...), and story characters sent from map to map. [How, with Tia's shop in Elcid as the example](docs/flags-and-npcs.md#npcs-that-change-with-the-story).
 - **Text:** 5,383 lines of dialogue, found by following the scripts, edited in place.
 
 <img src="screenshots/lufia2/cutscene-checks.png" width="900" alt="Lufia II cutscene playback">
